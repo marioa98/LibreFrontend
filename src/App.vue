@@ -1,27 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <libre-navbar />
+    <libre-header/>
+    <!-- <img src="./assets/logo.png">
+    <h1>{{ msg }}</h1> -->
+    <loader />
+    <!-- <libre-footer /> -->
   </div>
 </template>
 
 <script>
+// layout components
+import LibreHeader from './components/layout/Header.vue'
+import LibreFooter from './components/layout/Footer.vue'
+import LibreNavbar from './components/layout/Navbar.vue'
+// shared components
+import Loader from './components/shared/Loader.vue'
+
 export default {
   name: 'app',
+  components:{
+    Loader,
+    LibreFooter,
+    LibreHeader,
+    LibreNavbar
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -32,31 +35,21 @@ export default {
 
 <style lang="scss">
 @import './scss/main.scss';
+// h1, h2 {
+//   font-weight: normal;
+// }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+// ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
 
-h1, h2 {
-  font-weight: normal;
-}
+// li {
+//   display: inline-block;
+//   margin: 0 10px;
+// }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+// a {
+//   color: #42b983;
+// }
 </style>
