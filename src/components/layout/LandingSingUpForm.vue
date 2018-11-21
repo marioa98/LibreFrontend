@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="column box">
     <a class="button is-medium is-fullwidth">Iniciar Sesión</a>
     <hr>
     <form>
@@ -18,11 +18,12 @@
   </div>
 </template>
 <script>
-import InputText from '../inputs/InputText.vue';
-export default {
-  name: 'LandingSingUp',
-  components: {
-    InputText
+  import InputText from '../inputs/InputText.vue';
+  export default {
+    name: 'LandingSingUp',
+    components: {
+      InputText
+    }
   }
-}
+
 </script>

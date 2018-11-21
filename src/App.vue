@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <libre-landing />
+    <!-- <libre-landing /> -->
+    <libre-login/>
   </div>
 </template>
 <script>
   import LibreLanding from './pages/Landing.vue';
+  import LibreLogin from './pages/Login.vue';
   export default {
     name: 'app',
     components: {
-      LibreLanding
+      LibreLanding,
+      LibreLogin
     },
     data() {
       return {
