@@ -10,7 +10,7 @@
               <!-- correo -->
               <input-text />
               <!-- contraseña -->
-              <input-text />   
+              <input-text />
               <button class="button is-medium is-fullwidth">Entrar</button>
               <button class="button is-medium is-fullwidth">Entrar como Administrador</button>
             </form>
@@ -37,7 +37,8 @@
 
 </script>
 <style scoped>
-button {
+  button {
     margin-top: 10px;
-}
+  }
+
 </style>
