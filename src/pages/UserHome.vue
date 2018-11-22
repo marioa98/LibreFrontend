@@ -33,49 +33,54 @@
       UserSearchbar,
       LibreArchivo
     },
-    data() {
+    data () {
       return {
         archivos: [{
-            "id": 2,
-            "nombre": "Matadero Cinco",
-            "descripcion": "Descripción no disponible",
-            "uri": "https://www.gandhi.com.mx/matadero-cinco",
-            "img": "fuck base64",
-            "activo": true,
-            "createdAt": "2018-11-19T19:10:05.368+0000",
-            "updatedAt": "2018-11-19T19:10:05.368+0000",
-            "autores": [{
+          "id": 1,
+          "nombre": "Mujeres",
+          "descripcion": "Descripción no disponible",
+          "uri": "https://www.gandhi.com.mx/mujeres-12",
+          "img": "fuck base64",
+          "activo": true,
+          "createdAt": "2018-11-19T18:52:23.408+0000",
+          "updatedAt": "2018-11-19T18:52:23.408+0000",
+          "autores": [{
+            "id": 1,
+            "nombre": "Charles Bukowski",
+            "alias": "Bukowski",
+            "createdAt": "2018-11-19T19:13:08.177+0000",
+            "updatedAt": "2018-11-19T19:13:08.177+0000"
+          }],
+          "etiquetas": [{
+            "id": 1,
+            "keyword": "novela",
+            "createdAt": "2018-11-19T19:13:31.344+0000",
+            "updatedAt": "2018-11-19T19:13:31.344+0000"
+          }],
+          "comentarios": [{
+            "id": 1,
+            "texto": "Nice book.",
+            "createdAt": "2018-11-19T19:17:35.950+0000",
+            "updatedAt": "2018-11-19T19:17:35.950+0000",
+            "usuarios": {
               "id": 1,
-              "nombre": "Charles Bukowski",
-              "alias": "Bukowski",
-              "createdAt": "2018-11-19T19:13:08.177+0000",
-              "updatedAt": "2018-11-19T19:13:08.177+0000"
-            }],
-            "etiquetas": [],
-            "comentarios": [],
-            "tipos": null
-          },
-          {
-            "id": 2,
-            "nombre": "Matadero Cinco",
-            "descripcion": "Descripción no disponible",
-            "uri": "https://www.gandhi.com.mx/matadero-cinco",
-            "img": "fuck base64",
-            "activo": true,
-            "createdAt": "2018-11-19T19:10:05.368+0000",
-            "updatedAt": "2018-11-19T19:10:05.368+0000",
-            "autores": [{
-              "id": 1,
-              "nombre": "Charles Bukowski",
-              "alias": "Bukowski",
-              "createdAt": "2018-11-19T19:13:08.177+0000",
-              "updatedAt": "2018-11-19T19:13:08.177+0000"
-            }],
-            "etiquetas": [],
-            "comentarios": [],
-            "tipos": null
+              "nombre": "Paco",
+              "apellidos": "Batizo",
+              "correo": "psagags4@ucol.mx",
+              "activo": true,
+              "password": "someshit",
+              "createdAt": "2018-11-19T19:17:31.680+0000",
+              "updatedAt": "2018-11-19T19:17:31.680+0000",
+              "facultad": null
+            }
+          }],
+          "tipos": {
+            "id": 1,
+            "tipo": "video",
+            "createdAt": "2018-11-19T19:14:52.729+0000",
+            "updatedAt": "2018-11-19T19:14:52.729+0000"
           }
-        ],
+        }]
       }
     }
   }
