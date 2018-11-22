@@ -6,7 +6,8 @@
     <!-- <libre-user-home /> -->
     <!-- <libre-admin-home /> -->
     <!-- <libre-admin-archivo-list /> -->
-    <libre-administradores-list />
+    <!-- <libre-administradores-list /> -->
+    <libre-usuarios-list />
   </div>
 </template>
 <script>
@@ -20,7 +21,7 @@
   import LibreAdminHome from './pages/AdminHome.vue'
   import libreAdminArchivoList from './pages/AdminArchivoList.vue'
   import LibreAdministradoresList from './pages/AdminAdministradoresList.vue'
-  
+  import LibreUsuariosList from './pages/AdminUsuariosList.vue'
   export default {
     name: 'app',
     components: {
@@ -30,7 +31,8 @@
       LibreUserHome,
       LibreAdminHome,
       libreAdminArchivoList,
-      LibreAdministradoresList
+      LibreAdministradoresList,
+      LibreUsuariosList
     },
     data() {
       return {
