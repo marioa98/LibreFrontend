@@ -3,7 +3,8 @@
     <!-- <libre-landing /> -->
     <!-- <libre-login/> -->
     <!-- <libre-singup/> -->
-    <libre-user-home />
+    <!-- <libre-user-home /> -->
+    <libre-user-admin />
   </div>
 </template>
 <script>
@@ -13,13 +14,17 @@
   import LibreSingup from './pages/SingUp.vue'
   // user
   import LibreUserHome from './pages/UserHome.vue'
+  // admin
+  import LibreUserAdmin from './pages/AdminHome.vue'
+
   export default {
     name: 'app',
     components: {
       LibreLanding,
       LibreLogin,
       LibreSingup,
-      LibreUserHome
+      LibreUserHome,
+      LibreUserAdmin
     },
     data() {
       return {

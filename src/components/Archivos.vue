@@ -3,7 +3,6 @@
     <div class="card is-storyworld">
       <a class="card-header has-text-centered" href="/">
         <div class="card-image">
-          <p>{{ archivo.nombre }}</p>
         </div>
       </a>
       <div class="card-body">
@@ -40,6 +39,9 @@
 
 </script>
 <style scoped>
+  .card-image {
+    background-image: url('../assets/logo.png');
+  }
   .card.is-storyworld {
     display: -ms-flexbox;
     display: flex;
