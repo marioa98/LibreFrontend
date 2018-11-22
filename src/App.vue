@@ -4,7 +4,11 @@
     <!-- <libre-login/> -->
     <!-- <libre-singup/> -->
     <!-- <libre-user-home /> -->
-    <libre-user-admin />
+    <!-- <libre-admin-home /> -->
+    <!-- <libre-admin-archivo-list /> -->
+    <!-- <libre-administradores-list /> -->
+    <!-- <libre-usuarios-list /> -->
+    <libre-facultades-list />
   </div>
 </template>
 <script>
@@ -15,7 +19,11 @@
   // user
   import LibreUserHome from './pages/UserHome.vue'
   // admin
-  import LibreUserAdmin from './pages/AdminHome.vue'
+  import LibreAdminHome from './pages/AdminHome.vue'
+  import libreAdminArchivoList from './pages/AdminArchivoList.vue'
+  import LibreAdministradoresList from './pages/AdminAdministradoresList.vue'
+  import LibreUsuariosList from './pages/AdminUsuariosList.vue'
+  import LibreFacultadesList from './pages/AdminFacultadesList.vue'
 
   export default {
     name: 'app',
@@ -24,7 +32,11 @@
       LibreLogin,
       LibreSingup,
       LibreUserHome,
-      LibreUserAdmin
+      LibreAdminHome,
+      libreAdminArchivoList,
+      LibreAdministradoresList,
+      LibreUsuariosList,
+      LibreFacultadesList
     },
     data() {
       return {

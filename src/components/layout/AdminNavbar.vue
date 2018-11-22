@@ -18,7 +18,7 @@
             Administradores
           </a>
           <a class="navbar-item">
-            Usarios
+            Usuarios
           </a>
           <a class="navbar-item">
             Facultades
