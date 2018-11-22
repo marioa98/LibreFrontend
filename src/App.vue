@@ -5,7 +5,8 @@
     <!-- <libre-singup/> -->
     <!-- <libre-user-home /> -->
     <!-- <libre-admin-home /> -->
-    <libre-admin-archivo-list />
+    <!-- <libre-admin-archivo-list /> -->
+    <libre-administradores-list />
   </div>
 </template>
 <script>
@@ -17,7 +18,9 @@
   import LibreUserHome from './pages/UserHome.vue'
   // admin
   import LibreAdminHome from './pages/AdminHome.vue'
-  import libreAdminArchivoList from './pages/AdminArchivoList'
+  import libreAdminArchivoList from './pages/AdminArchivoList.vue'
+  import LibreAdministradoresList from './pages/AdminAdministradoresList.vue'
+  
   export default {
     name: 'app',
     components: {
@@ -26,7 +29,8 @@
       LibreSingup,
       LibreUserHome,
       LibreAdminHome,
-      libreAdminArchivoList
+      libreAdminArchivoList,
+      LibreAdministradoresList
     },
     data() {
       return {
