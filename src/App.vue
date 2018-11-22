@@ -2,19 +2,24 @@
   <div id="app">
     <!-- <libre-landing /> -->
     <!-- <libre-login/> -->
-    <libre-singup/>
+    <!-- <libre-singup/> -->
+    <libre-user-home />
   </div>
 </template>
 <script>
-  import LibreLanding from './pages/Landing.vue';
-  import LibreLogin from './pages/Login.vue';
-  import LibreSingup from './pages/SingUp.vue';
+  // landing
+  import LibreLanding from './pages/Landing.vue'
+  import LibreLogin from './pages/Login.vue'
+  import LibreSingup from './pages/SingUp.vue'
+  // user
+  import LibreUserHome from './pages/UserHome.vue'
   export default {
     name: 'app',
     components: {
       LibreLanding,
       LibreLogin,
-      LibreSingup
+      LibreSingup,
+      LibreUserHome
     },
     data() {
       return {
