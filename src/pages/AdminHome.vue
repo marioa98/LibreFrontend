@@ -1,36 +1,24 @@
 <template>
-  <div>
-    <admin-navbar />
-    <admin-header v-bind:admin="admin"/>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-3 is-2-widescreen">
-            <admin-menu />
-          </div>
-          <div class="column is-10">
-            <section class="info-tiles">
-
-              <div class="tile is-ancestor has-text-centered is-centered">
-                <admin-tiles v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
-              </div>
-            
-            </section>
-            <div class="columns is-multiline is-centered">
-              <admin-searchbar class="column is-5" v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
-            </div>
-          </div>
-        </div>
+  <admin-base-layout>
+    <admin-navbar slot="navbar" />
+    <admin-header slot="header" v-bind:admin="admin" />
+    <admin-menu slot="menu" />
+    <section class="info-tiles">
+      <div class="tile is-ancestor has-text-centered is-centered">
+        <admin-tiles v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
       </div>
     </section>
-  </div>
+    <div class="columns is-multiline is-centered">
+      <admin-searchbar class="column is-5" v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
+    </div>
+  </admin-base-layout>
 </template>
 <script>
   // layout
+  import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
   import AdminNavbar from '../components/layout/AdminNavbar.vue'
   import AdminHeader from '../components/layout/AdminHeader.vue'
   import AdminMenu from '../components/layout/AdminMenu.vue'
-
   // shared
   import AdminTiles from '../components/shared/Tiles.vue'
   import AdminSearchbar from '../components/shared/Searchbar.vue'
@@ -38,11 +26,12 @@
   export default {
     name: 'AdminHome',
     components: {
+      AdminBaseLayout,
       AdminNavbar,
+      AdminHeader,
+      AdminMenu,
       AdminTiles,
       AdminSearchbar,
-      AdminMenu,
-      AdminHeader
     },
     data() {
       return {
