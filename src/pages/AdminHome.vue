@@ -1,70 +1,23 @@
 <template>
   <div>
     <admin-navbar />
-    <section class="hero welcome is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title"> {{ "Hola, " + admin.nombre }} </h1>
-          <h2 class="subtitle"> ¡Esperamos que estes teniendo un gran dia! </h2>
-        </div>
-      </div>
-    </section>
-    <section class="section is-medium is-storyworlds has-background">
+    <admin-header v-bind:admin="admin"/>
+    <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column is-3 is-2-widescreen">
-            <div class="menu">
-
-              <p class="menu-label">General</p>
-              <ul class="menu-list">
-                <li>
-                  <a href="/">Inicio</a>
-                </li>
-                <li>
-                    <a href="/">Pefil</a>
-                </li>
-              </ul>
-              
-              <p class="menu-label">Archivos</p>
-              <ul class="menu-list">
-                  <li>
-                      <a href="/">Ver archivos</a>
-                  </li>
-                  <li>
-                      <a href="/">Agregar archivos</a>
-                  </li>
-              </ul>
-
-              <p class="menu-label">Administradores</p>
-              <ul class="menu-list">
-                  <li>
-                      <a href="/">Ver administradores</a>
-                  </li>
-                  <li>
-                      <a href="/">Agregar administrador</a>
-                  </li>
-              </ul>
-
-              <p class="menu-label">Facultades</p>
-              <ul class="menu-list">
-                  <li>
-                      <a href="/">Ver facultades</a>
-                  </li>
-                  <li>
-                      <a href="/">Agregar facultades</a>
-                  </li>
-              </ul>
-            </div>
+            <admin-menu />
           </div>
-          <div class="column is-9">
-
+          <div class="column is-10">
             <section class="info-tiles">
-              <div class="tile is-ancestor has-text-centered">
+
+              <div class="tile is-ancestor has-text-centered is-centered">
                 <admin-tiles v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
               </div>
+            
             </section>
-            <div class="columns is-multiline">
-              <admin-searchbar class="column is-half" v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
+            <div class="columns is-multiline is-centered">
+              <admin-searchbar class="column is-5" v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
             </div>
           </div>
         </div>
@@ -73,15 +26,23 @@
   </div>
 </template>
 <script>
+  // layout
   import AdminNavbar from '../components/layout/AdminNavbar.vue'
+  import AdminHeader from '../components/layout/AdminHeader.vue'
+  import AdminMenu from '../components/layout/AdminMenu.vue'
+
+  // shared
   import AdminTiles from '../components/shared/Tiles.vue'
   import AdminSearchbar from '../components/shared/Searchbar.vue'
+
   export default {
     name: 'AdminHome',
     components: {
       AdminNavbar,
       AdminTiles,
-      AdminSearchbar
+      AdminSearchbar,
+      AdminMenu,
+      AdminHeader
     },
     data() {
       return {

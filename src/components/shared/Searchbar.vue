@@ -13,7 +13,7 @@
     <div class="card-content">
       <div class="content">
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-large" type="text" placeholder="">
+          <input class="input" type="text" placeholder="">
           <span class="icon is-medium is-left">
             <i class="fa fa-search"></i>
           </span>
@@ -37,3 +37,9 @@
   }
 
 </script>
+<style scoped>
+.card {
+  margin: 10px;
+  width: 469px;
+}
+</style>
