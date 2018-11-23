@@ -1,6 +1,6 @@
 <template>
   <admin-base-layout v-bind:admin="admin">
-    <facultad-form-info v-bind:facultad="facultad"/>
+    <facultad-form-info v-bind:facultad="facultad" />
   </admin-base-layout>
 </template>
 <script>

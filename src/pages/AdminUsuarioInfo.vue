@@ -1,6 +1,6 @@
 <template>
   <admin-base-layout v-bind:admin="admin">
-    <usuario-form-info v-bind:usuario="usuario"/>
+    <usuario-form-info v-bind:usuario="usuario" />
   </admin-base-layout>
 </template>
 <script>
@@ -21,9 +21,9 @@
           nombre: 'Gerry'
         },
         usuario: {
-            nombre: 'Gerardo',
-            apellidos: 'Larios',
-            correo: 'gchavez8@email.com'
+          nombre: 'Gerardo',
+          apellidos: 'Larios',
+          correo: 'gchavez8@email.com'
         }
       }
     }

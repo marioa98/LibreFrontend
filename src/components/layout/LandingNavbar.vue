@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar is-fixed-top">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="../">
@@ -8,16 +8,16 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item">
+          <a href="#home" class="navbar-item">
             Inicio
           </a>
-          <a class="navbar-item">
+          <a href="#team" class="navbar-item">
             Equipo
           </a>
-          <a class="navbar-item">
+          <a href="#help" class="navbar-item">
             Ayuda
           </a>
-          <a class="navbar-item">
+          <a href="#contact" class="navbar-item">
             Contactanos
           </a>
         </div>

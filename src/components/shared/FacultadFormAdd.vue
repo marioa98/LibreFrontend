@@ -16,15 +16,14 @@
     data() {
       return {
         fields: [{
-            id: 1,
-            ident: 'FacultadName',
-            label: 'Nombre',
-            name: 'name',
-            placeholder: '',
-            value: '',
-            type: 'text'
-          }
-        ]
+          id: 1,
+          ident: 'FacultadName',
+          label: 'Nombre',
+          name: 'name',
+          placeholder: '',
+          value: '',
+          type: 'text'
+        }]
       }
     }
   }

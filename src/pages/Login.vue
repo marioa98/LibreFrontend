@@ -8,11 +8,12 @@
           <div class="box">
             <form>
               <!-- correo -->
-              <input-text />
+              <input-text v-bind:field="fields[0]" />
               <!-- contraseña -->
-              <input-text />
-              <button class="button is-medium is-fullwidth">Entrar</button>
-              <button class="button is-medium is-fullwidth">Entrar como Administrador</button>
+              <input-text v-bind:field="fields[1]" />
+
+              <button class="button is-fullwidth">Entrar</button>
+              <button class="button is-fullwidth">Entrar como administrador</button>
             </form>
           </div>
           <p>
@@ -32,6 +33,29 @@
     name: 'Login',
     components: {
       InputText
+    },
+    data() {
+      return {
+        fields: [{
+            id: 1,
+            ident: 'UsuarioEmail',
+            label: 'Email',
+            name: 'email',
+            placeholder: '',
+            value: '',
+            type: 'email'
+          },
+          {
+            id: 2,
+            ident: 'UsuarioPassword',
+            label: 'Password',
+            name: 'password',
+            placeholder: '',
+            value: '',
+            type: 'password'
+          }
+        ]
+      }
     }
   }
 

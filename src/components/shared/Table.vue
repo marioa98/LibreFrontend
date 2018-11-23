@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-        <slot></slot>
+      <slot></slot>
     </tbody>
   </table>
 </template>
