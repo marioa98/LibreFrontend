@@ -12,7 +12,10 @@
     <!-- <libre-administrador-info /> -->
     <!-- <libre-archivo-info /> -->
     <!-- <libre-facultad-info /> -->
-    <libre-usuario-info />
+    <!-- <libre-usuario-info /> -->
+    <!-- <libre-admin-add /> -->
+    <!-- <libre-facultad-add />  -->
+    <libre-archivo-add />
   </div>
 </template>
 <script>
@@ -32,6 +35,9 @@
   import LibreArchivoInfo from './pages/AdminArchivoInfo.vue'
   import LibreFacultadInfo from './pages/AdminFacultadInfo.vue'
   import LibreUsuarioInfo from './pages/AdminUsuarioInfo.vue'
+  import LibreAdminAdd from './pages/AdminAdministradorAdd.vue'
+  import LibreFacultadAdd from './pages/AdminFacultadAdd.vue'
+  import LibreArchivoAdd from './pages/AdminArchivoAdd.vue'
 
   export default {
     name: 'app',
@@ -48,7 +54,10 @@
       LibreAdministradorInfo,
       LibreArchivoInfo,
       LibreFacultadInfo,
-      LibreUsuarioInfo
+      LibreUsuarioInfo,
+      LibreAdminAdd,
+      LibreFacultadAdd,
+      LibreArchivoAdd
     },
     data() {
       return {
