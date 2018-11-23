@@ -39,7 +39,8 @@
   </div>
 </template>
 <script>
-export default {
+  export default {
     name: 'AdminMenu'
-}
+  }
+
 </script>

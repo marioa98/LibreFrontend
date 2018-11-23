@@ -10,13 +10,14 @@
 </template>
 
 <script>
-export default {
+  export default {
     name: 'AdminHeader',
     props: {
-        admin: {
-            type: Object,
-            required: true
-        }
+      admin: {
+        type: Object,
+        required: true
+      }
     }
-}
+  }
+
 </script>

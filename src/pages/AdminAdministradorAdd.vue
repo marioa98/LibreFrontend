@@ -6,7 +6,7 @@
 <script>
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
-    import AdminFormAdd from '../components/shared/AdminFormAdd.vue'
+  import AdminFormAdd from '../components/shared/AdminFormAdd.vue'
 
   export default {
     name: 'AdminAdministradorInfo',

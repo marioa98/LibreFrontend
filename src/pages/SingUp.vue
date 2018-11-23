@@ -18,7 +18,7 @@
                 <input-text v-bind:field="fields[3]" />
                 <!-- facultad -->
                 <input-text v-bind:field="fields[4]" />
-                
+
                 <button class="button is-medium is-fullwidth">Crear una cuenta</button>
               </form>
             </div>

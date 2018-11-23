@@ -33,7 +33,7 @@
       UserSearchbar,
       LibreArchivo
     },
-    data () {
+    data() {
       return {
         archivos: [{
           "id": 1,

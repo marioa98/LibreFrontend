@@ -8,9 +8,9 @@
           <div class="box">
             <form>
               <!-- correo -->
-              <input-text v-bind:field="fields[0]"/>
+              <input-text v-bind:field="fields[0]" />
               <!-- contraseña -->
-              <input-text v-bind:field="fields[1]"/>
+              <input-text v-bind:field="fields[1]" />
 
               <button class="button is-fullwidth">Entrar</button>
               <button class="button is-fullwidth">Entrar como administrador</button>

@@ -24,15 +24,14 @@
     data() {
       return {
         fields: [{
-            id: 1,
-            ident: 'FacultadName',
-            label: 'Nombre',
-            name: 'name',
-            placeholder: '',
-            value: this.facultad.nombre,
-            type: 'text'
-          }
-        ]
+          id: 1,
+          ident: 'FacultadName',
+          label: 'Nombre',
+          name: 'name',
+          placeholder: '',
+          value: this.facultad.nombre,
+          type: 'text'
+        }]
       }
     }
   }

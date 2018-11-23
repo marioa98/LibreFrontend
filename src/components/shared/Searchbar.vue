@@ -38,8 +38,9 @@
 
 </script>
 <style scoped>
-.card {
-  margin: 10px;
-  width: 469px;
-}
+  .card {
+    margin: 10px;
+    width: 469px;
+  }
+
 </style>

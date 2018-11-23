@@ -32,8 +32,7 @@
           "correo": "gchavez8@ucol.mx",
           "activo": true
         }],
-        headers: [
-          {
+        headers: [{
             id: 1,
             name: 'id'
           },
