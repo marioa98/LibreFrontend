@@ -22,7 +22,7 @@
                 </div>
               </div>
               <button class="button is-fullwidth">Entrar</button>
-              <button class="button is-fullwidth">Entrar como administrador</button>
+              <button class="button is-fullwidth" v-on:click="setUserNormal">Entrar como administrador</button>
             </form>
           </div>
           <p>
@@ -36,43 +36,39 @@
 
 <script>
   import usuarioService from '../services/usuario'
+  import administradorService from '../services/administrador'
 
   export default {
     name: 'Login',
     methods: {
       submit: function () {
-        usuarioService.login({
-          correo: this.correo,
-          password: this.password
-        }).then(res => {
-          this.persona = res
-        })
+        if (this.usuarioNormal === true) {
+          usuarioService.login({
+            correo: this.correo,
+            password: this.password
+          }).then(res => {
+            this.persona = res
+          })
+        } else {
+          administradorService.login({
+            correo: this.correo,
+            password: this.password
+          }).then(res => {
+            this.persona = res
+          })
+        }
+      },
+      setUserNormal: function () {
+        console.log('Hola')
+        this.usuarioNormal = false
       }
     },
     data() {
       return {
         correo: '',
         password: '',
-        persona: {},
-        fields: [{
-            id: 1,
-            ident: 'UsuarioEmail',
-            label: 'Email',
-            name: 'email',
-            placeholder: '',
-            value: '',
-            type: 'email'
-          },
-          {
-            id: 2,
-            ident: 'UsuarioPassword',
-            label: 'Password',
-            name: 'password',
-            placeholder: '',
-            value: '',
-            type: 'password'
-          }
-        ]
+        usuarioNormal: true,
+        persona: {}
       }
     }
   }
