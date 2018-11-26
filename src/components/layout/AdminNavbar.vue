@@ -23,6 +23,9 @@
           <a class="navbar-item">
             Facultades
           </a>
+          <a class="navbar-item">
+            Autores
+          </a>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Cuenta

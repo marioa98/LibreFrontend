@@ -36,6 +36,15 @@
         <a href="/">Agregar facultades</a>
       </li>
     </ul>
+    <p class="menu-label">Autores</p>
+    <ul class="menu-list">
+      <li>
+        <a href="/">Ver autores</a>
+      </li>
+      <li>
+        <a href="/">Agregar autor</a>
+      </li>
+    </ul>
   </div>
 </template>
 <script>
