@@ -61,8 +61,10 @@
       setUserNormal: function () {
         this.usuarioNormal = false
       },
-      goToHome: function () {
-        
+      goToHome: function (id) {
+        if (this.usuarioNormal === false) {
+          
+        }
       }
     },
     data() {
