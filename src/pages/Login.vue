@@ -6,20 +6,27 @@
           <h3 class="title">Iniciar Sesión</h3>
           <p class="subtitle">Inicie sesión para poder continuar</p>
           <div class="box">
-            <form>
-              <!-- correo -->
-              <input-text v-bind:field="fields[0]" />
-              <!-- contraseña -->
-              <input-text v-bind:field="fields[1]" />
-
+            <form v-on:submit.prevent="submit">
+              <div class="field">
+                <label for="UsuarioEmail">Email</label>
+                <div class="control">
+                  <input class="input" type="email" name="email" id="UsuarioEmail" placeholder="e.j. alexsmith@gmail.com"
+                    v-model="correo">
+                </div>
+              </div>
+              <div class="field">
+                <label for="UsuarioPassword">Password</label>
+                <div class="control">
+                  <input class="input" type="password" name="password" id="UsuarioPassword" placeholder="contraseña"
+                    v-model="password">
+                </div>
+              </div>
               <button class="button is-fullwidth">Entrar</button>
-              <button class="button is-fullwidth">Entrar como administrador</button>
+              <button class="button is-fullwidth" v-on:click="setUserNormal">Entrar como administrador</button>
             </form>
           </div>
           <p>
-            <a href="../">Registrarse</a> &nbsp;·&nbsp;
-            <a href="../">¿Olvidaste tu contraseña?</a> &nbsp;·&nbsp;
-            <a href="../">Ayuda</a>
+            <router-link to="/singup">Registrarse</router-link>
           </p>
         </div>
       </div>
@@ -28,33 +35,42 @@
 </template>
 
 <script>
-  import InputText from '../components/inputs/InputText.vue';
+  import usuarioService from '../services/usuario'
+  import administradorService from '../services/administrador'
+
   export default {
     name: 'Login',
-    components: {
-      InputText
+    methods: {
+      submit: function () {
+        if (this.usuarioNormal === true) {
+          usuarioService.login({
+            correo: this.correo,
+            password: this.password
+          }).then(res => {
+            this.persona = res
+          })
+        } else {
+          administradorService.login({
+            correo: this.correo,
+            password: this.password
+          }).then(res => {
+            this.persona = res
+          })
+        }
+      },
+      setUserNormal: function () {
+        this.usuarioNormal = false
+      },
+      goToHome: function () {
+        
+      }
     },
     data() {
       return {
-        fields: [{
-            id: 1,
-            ident: 'UsuarioEmail',
-            label: 'Email',
-            name: 'email',
-            placeholder: '',
-            value: '',
-            type: 'email'
-          },
-          {
-            id: 2,
-            ident: 'UsuarioPassword',
-            label: 'Password',
-            name: 'password',
-            placeholder: '',
-            value: '',
-            type: 'password'
-          }
-        ]
+        correo: '',
+        password: '',
+        usuarioNormal: true,
+        persona: {}
       }
     }
   }
