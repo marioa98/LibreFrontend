@@ -22,3 +22,5 @@ facultadService.agregar = function (body) {
   facultadService.eliminar = function (id) {
     return libreBackendService.delete(`${requestMapping}/${id}`).then((res) => res.data)
   }
+
+  export default facultadService
