@@ -2,45 +2,22 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="../">
-          <strong>LIBRE</strong>
-        </a>
+        <router-link class="navbar-item" to="/admin/home"><strong>LIBRE</strong></router-link>
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item">
-            Inicio
-          </a>
-          <a class="navbar-item">
-            Archivos
-          </a>
-          <a class="navbar-item">
-            Administradores
-          </a>
-          <a class="navbar-item">
-            Usuarios
-          </a>
-          <a class="navbar-item">
-            Facultades
-          </a>
-          <a class="navbar-item">
-            Autores
-          </a>
+          <router-link class="navbar-item" to="/admin/home">Inicio</router-link>
+          <router-link class="navbar-item" to="/admin/archivos">Archivos</router-link>
+          <router-link class="navbar-item" to="/admin/administradores">Administradores</router-link>
+          <router-link class="navbar-item" to="/admin/usuarios"> Usuarios</router-link>
+          <router-link class="navbar-item" to="/admin/facultades">Facultades</router-link>
+          <router-link class="navbar-item" to="/admin/autores">Autores</router-link>
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Cuenta
-            </a>
+            <a class="navbar-link">Cuenta</a>
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Perfil
-              </a>
-              <a class="navbar-item">
-                Configuración
-              </a>
+              <router-link class="navbar-item" to="">Perfil</router-link>
               <hr class="navbar-divider">
-              <a class="navbar-item">
-                Salir
-              </a>
+              <router-link class="navbar-item" to="/">Salir</router-link>
             </div>
           </div>
         </div>
