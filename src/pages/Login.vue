@@ -57,13 +57,25 @@
             this.persona = res
           })
         }
+
+        if (this.persona.id) {
+          this.goToHome(this.persona.id)
+        } else {
+          console.log('No encontrado...')
+        }
       },
       setUserNormal: function () {
         this.usuarioNormal = false
+        console.log('Hola')
       },
       goToHome: function (id) {
         if (this.usuarioNormal === false) {
-          
+          this.$router.push({
+            name: 'adminHome',
+            params: {
+              id
+            }
+          })
         }
       }
     },

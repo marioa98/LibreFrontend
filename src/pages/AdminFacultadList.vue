@@ -1,9 +1,9 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-table v-bind:headers="headers">
       <facultad-table-element v-for="facultad in facultades" v-bind:facultad="facultad" v-bind:key="facultad.id" />
     </admin-table>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout

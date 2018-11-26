@@ -1,9 +1,9 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-table v-bind:headers="headers">
       <archivo-table-element v-for="archivo in archivos" v-bind:archivo="archivo" v-bind:key="archivo.id" />
     </admin-table>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout

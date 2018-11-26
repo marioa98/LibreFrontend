@@ -1,7 +1,7 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-form-add />
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout

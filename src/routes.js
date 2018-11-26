@@ -5,6 +5,7 @@ import LibreSingup from './pages/SingUp.vue'
 // // user
 // import LibreUserHome from './pages/UserHome.vue'
 // admin
+import LibreAdminTemplate from './pages/AdminTemplate.vue'
 import LibreAdminHome from './pages/AdminHome.vue'
 import libreAdminArchivoList from './pages/AdminArchivoList.vue'
 import LibreAdministradoresList from './pages/AdminAdministradoresList.vue'
@@ -36,34 +37,39 @@ const routes = [{
     name: 'singup'
   },
   {
-    path: '/admin/home',
-    component: LibreAdminHome,
-    name: 'adminHome'
-  },
-  {
-    path: '/admin/archivos',
-    component: libreAdminArchivoList,
-    name: 'archivoList'
-  },
-  {
-    path: '/admin/administradores',
-    component: LibreAdministradoresList,
-    name: 'administradoresList'
-  },
-  {
-    path: '/admin/usuarios',
-    component: LibreUsuariosList,
-    name: 'usuariosList'
-  },
-  {
-    path: '/admin/facultades',
-    component: LibreFacultadList,
-    name: 'facultadesList'
-  },
-  {
-    path: '/admin/autores',
-    component: LibreAutorList,
-    name: 'autorList'
+    path: '/admin',
+    component: LibreAdminTemplate,
+    children: [{
+        path: 'home',
+        component: LibreAdminHome,
+        name: 'adminHome'
+      },
+      {
+        path: 'archivos',
+        component: libreAdminArchivoList,
+        name: 'archivoList'
+      },
+      {
+        path: 'administradores',
+        component: LibreAdministradoresList,
+        name: 'administradoresList'
+      },
+      {
+        path: 'usuarios',
+        component: LibreUsuariosList,
+        name: 'usuariosList'
+      },
+      {
+        path: 'facultades',
+        component: LibreFacultadList,
+        name: 'facultadesList'
+      },
+      {
+        path: 'autores',
+        component: LibreAutorList,
+        name: 'autorList'
+      }
+    ]
   }
 ]
 

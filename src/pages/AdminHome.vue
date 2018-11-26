@@ -1,5 +1,5 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <section class="info-tiles">
       <div class="tile is-ancestor has-text-centered is-centered">
         <admin-tiles v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
@@ -8,11 +8,10 @@
     <div class="columns is-multiline is-centered">
       <admin-searchbar class="column is-5" v-for="co in currentObjects" v-bind:infoObject="co" v-bind:key="co.id" />
     </div>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
-  // layout
-  import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
+  // import administradorService from '../services/administrador'
   // shared
   import AdminTiles from '../components/shared/Tiles.vue'
   import AdminSearchbar from '../components/shared/Searchbar.vue'
@@ -20,16 +19,14 @@
   export default {
     name: 'AdminHome',
     components: {
-      AdminBaseLayout,
       AdminTiles,
       AdminSearchbar
     },
+    created() {
+      console.log('HOME')
+    },
     data() {
       return {
-        admin: {
-          id: 1,
-          nombre: 'Gerry'
-        },
         currentObjects: [{
             id: 1,
             nombre: "Archivos",

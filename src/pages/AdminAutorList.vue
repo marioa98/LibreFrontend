@@ -1,9 +1,9 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-table v-bind:headers="headers">
       <autor-table-element v-for="autor in autores" v-bind:autor="autor" v-bind:key="autor.id" />
     </admin-table>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout

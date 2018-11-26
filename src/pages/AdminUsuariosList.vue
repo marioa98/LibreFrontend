@@ -1,9 +1,9 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-table v-bind:headers="headers">
       <usuario-table-element v-for="usuario in usuarios" v-bind:usuario="usuario" v-bind:key="usuario.id" />
     </admin-table>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout
