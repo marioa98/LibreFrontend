@@ -75,6 +75,9 @@
             this.usuario = res.data
           }
         )
+      },
+      goToHome: function () {
+        
       }
     },
     data() {
