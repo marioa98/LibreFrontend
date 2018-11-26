@@ -13,7 +13,7 @@
   import FacultadTableElement from '../components/shared/FacultadTableElement.vue'
 
   export default {
-    name: 'AdminArchivoList',
+    name: 'AdminFacultadList',
     components: {
       AdminBaseLayout,
       AdminTable,

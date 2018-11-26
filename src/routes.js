@@ -9,7 +9,8 @@ import LibreAdminHome from './pages/AdminHome.vue'
 import libreAdminArchivoList from './pages/AdminArchivoList.vue'
 import LibreAdministradoresList from './pages/AdminAdministradoresList.vue'
 import LibreUsuariosList from './pages/AdminUsuariosList.vue'
-import LibreFacultadesList from './pages/AdminFacultadesList.vue'
+import LibreFacultadList from './pages/AdminFacultadList.vue'
+import LibreAutorList from './pages/AdminAutorList.vue'
 // import LibreAdministradorInfo from './pages/AdminAdministradorInfo.vue'
 // import LibreArchivoInfo from './pages/AdminArchivoInfo.vue'
 // import LibreFacultadInfo from './pages/AdminFacultadInfo.vue'
@@ -17,6 +18,7 @@ import LibreFacultadesList from './pages/AdminFacultadesList.vue'
 // import LibreAdminAdd from './pages/AdminAdministradorAdd.vue'
 // import LibreFacultadAdd from './pages/AdminFacultadAdd.vue'
 // import LibreArchivoAdd from './pages/AdminArchivoAdd.vue'
+// import LibreAutorAdd from './pages/AdminFacultadAdd.vue'
 
 const routes = [{
     path: '/',
@@ -55,8 +57,13 @@ const routes = [{
   },
   {
     path: '/admin/facultades',
-    component: LibreFacultadesList,
+    component: LibreFacultadList,
     name: 'facultadesList'
+  },
+  {
+    path: '/admin/autores',
+    component: LibreAutorList,
+    name: 'autorList'
   }
 ]
 

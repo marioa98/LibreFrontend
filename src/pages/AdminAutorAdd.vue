@@ -9,7 +9,7 @@
   import FacultadFormAdd from '../components/shared/FacultadFormAdd.vue'
 
   export default {
-    name: 'AdminFacultadAdd',
+    name: 'AdminAutorAdd',
     components: {
       AdminBaseLayout,
       FacultadFormAdd
