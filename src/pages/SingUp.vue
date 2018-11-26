@@ -40,12 +40,12 @@
                   <div class="control">
                     <div class="select">
                       <select v-model="facultad">
-                        <option value=""></option>
+                        <option v-for="f in facultades" v-bind:value="f.nombre" v-bind:key="f.id"> {{ f.nombre }}
+                        </option>
                       </select>
                     </div>
                   </div>
                 </div>
-                <p> {{ facultad }} </p>
                 <button class="button is-medium is-fullwidth">Crear una cuenta</button>
               </form>
             </div>
@@ -56,11 +56,27 @@
   </section>
 </template>
 <script>
-  import InputText from '../components/inputs/InputText.vue';
   import facultadService from '../services/facultad'
+  import usuarioService from '../services/usuario'
 
   export default {
     name: 'Login',
+    methods: {
+      submit: function () {
+        usuarioService.agregar({
+          nombre: this.nombre,
+          apellidos: this.apellidos,
+          correo: this.correo,
+          activo: this.activo,
+          password: this.password,
+          facultad: this.facultad
+        }).then(
+          res => {
+            this.usuario = res.data
+          }
+        )
+      }
+    },
     data() {
       return {
         nombre: '',
@@ -69,11 +85,14 @@
         activo: true,
         password: '',
         facultad: '',
-        facultades: []
+        usuario: {},
+        facultades: [],
       }
     },
-    mounted () {
-
+    mounted() {
+      facultadService.obtenerTodos().then(res => {
+        this.facultades = res
+      })
     }
   }
 

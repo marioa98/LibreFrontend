@@ -59,8 +59,10 @@
         }
       },
       setUserNormal: function () {
-        console.log('Hola')
         this.usuarioNormal = false
+      },
+      goToHome: function () {
+        
       }
     },
     data() {
