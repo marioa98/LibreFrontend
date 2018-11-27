@@ -1,25 +1,21 @@
 <template>
   <div>
-    <facultad-form-add />
+    <autor-form-add />
   </div>
 </template>
 <script>
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
-  import FacultadFormAdd from '../components/shared/FacultadFormAdd.vue'
+  import AutorFormAdd from '../components/shared/AutorFormAdd.vue'
 
   export default {
     name: 'AdminAutorAdd',
     components: {
       AdminBaseLayout,
-      FacultadFormAdd
+      AutorFormAdd
     },
     data() {
       return {
-        admin: {
-          id: 1,
-          nombre: 'Gerry'
-        }
       }
     }
   }
