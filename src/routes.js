@@ -2,8 +2,11 @@
 import LibreLanding from './pages/Landing.vue'
 import LibreLogin from './pages/Login.vue'
 import LibreSingup from './pages/SingUp.vue'
+
 // // user
-// import LibreUserHome from './pages/UserHome.vue'
+import LibreUserHome from './pages/UserHome.vue'
+import LibreUserTemplate from './pages/UsuarioTemplate.vue'
+
 // admin
 import LibreAdminTemplate from './pages/AdminTemplate.vue'
 import LibreAdminHome from './pages/AdminHome.vue'
@@ -90,6 +93,15 @@ const routes = [{
         name: 'autorAdd'
       }
     ]
+  },
+  {
+    path: '/user',
+    component: LibreUserTemplate,
+    children: [{
+      path: 'home',
+      component: LibreUserHome,
+      name: 'usuarioHome'
+    }]
   }
 ]
 

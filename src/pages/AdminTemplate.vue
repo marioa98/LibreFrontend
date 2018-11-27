@@ -15,7 +15,6 @@
     },
     created() {
       const id = this.$route.params.id
-      console.log(id)
       administradorService.obtenerPorId(id).then(
         res => {
           this.admin = res

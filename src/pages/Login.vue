@@ -72,7 +72,12 @@
         })
       },
       goToHomeUser: function (id) {
-        console.log('Bueno...')
+        this.$router.push({
+          name: 'usuarioHome',
+          params: {
+            id
+          }
+        })
       }
     },
     data() {

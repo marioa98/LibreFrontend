@@ -12,7 +12,7 @@
           </div>
         </a>
         <div class="card-meta">
-          {{ archivo.autores[0].nombre }}
+          AUTOR
         </div>
         <div class="card-description">
           <p>{{ archivo.descripcion }}</p>
