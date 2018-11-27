@@ -2,8 +2,8 @@
   <tr>
     <th>{{ archivo.id }}</th>
     <td>{{ archivo.nombre }}</td>
-    <td>{{ archivo.activo }}</td>
-    <td>{{ archivo.tipos.tipo }}</td>
+    <!-- <td>{{ archivo.activo }}</td>
+    <td>{{ archivo.tipos.tipo }}</td> -->
     <td>
       <button>
         ver
