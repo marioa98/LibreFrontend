@@ -6,7 +6,7 @@
           <h3 class="title">Iniciar Sesión</h3>
           <p class="subtitle">Inicie sesión para poder continuar</p>
           <div class="box">
-            <form v-on:submit.prevent="submit">
+            <form>
               <div class="field">
                 <label for="UsuarioEmail">Email</label>
                 <div class="control">
@@ -21,8 +21,8 @@
                     v-model="password">
                 </div>
               </div>
-              <button class="button is-fullwidth">Entrar</button>
-              <button class="button is-fullwidth" v-on:click="setUserNormal">Entrar como administrador</button>
+              <a class="button is-fullwidth" v-on:click="submitToNormalUser">Entrar</a>
+              <a class="button is-fullwidth" v-on:click="submitToAdmin">Entrar como administrador</a>
             </form>
           </div>
           <p>
@@ -41,35 +41,44 @@
   export default {
     name: 'Login',
     methods: {
-      submit: function () {
-        if (this.usuarioNormal === true) {
-          usuarioService.login({
-            correo: this.correo,
-            password: this.password
-          }).then(res => {
-            this.persona = res
-          })
-        } else {
-          administradorService.login({
-            correo: this.correo,
-            password: this.password
-          }).then(res => {
-            this.persona = res
-          })
+      submitToNormalUser: function () {
+        usuarioService.login({
+          correo: this.correo,
+          password: this.password
+        }).then(res => {
+          this.persona = res
+        })
+        if (this.persona.id) {
+          this.goToHomeUser(this.persona.id)
         }
       },
-      setUserNormal: function () {
-        this.usuarioNormal = false
+      submitToAdmin: function () {
+        administradorService.login({
+          correo: this.correo,
+          password: this.password
+        }).then(res => {
+          this.persona = res
+        })
+        if (this.persona.id) {
+          this.goToHomeAdmin(this.persona.id)
+        } else {}
       },
-      goToHome: function () {
-        
+      goToHomeAdmin: function (id) {
+        this.$router.push({
+          name: 'adminHome',
+          params: {
+            id
+          }
+        })
+      },
+      goToHomeUser: function (id) {
+        console.log('Bueno...')
       }
     },
     data() {
       return {
         correo: '',
         password: '',
-        usuarioNormal: true,
         persona: {}
       }
     }

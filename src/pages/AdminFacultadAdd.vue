@@ -1,7 +1,7 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <facultad-form-add />
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout
@@ -9,7 +9,7 @@
   import FacultadFormAdd from '../components/shared/FacultadFormAdd.vue'
 
   export default {
-    name: 'AdminAdministradorInfo',
+    name: 'AdminFacultadAdd',
     components: {
       AdminBaseLayout,
       FacultadFormAdd

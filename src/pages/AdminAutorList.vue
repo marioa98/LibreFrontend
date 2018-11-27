@@ -1,23 +1,23 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <admin-table v-bind:headers="headers">
-      <facultad-table-element v-for="facultad in facultades" v-bind:facultad="facultad" v-bind:key="facultad.id" />
+      <autor-table-element v-for="autor in autores" v-bind:autor="autor" v-bind:key="autor.id" />
     </admin-table>
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
   //shared
   import AdminTable from '../components/shared/Table.vue'
-  import FacultadTableElement from '../components/shared/FacultadTableElement.vue'
+  import AutorTableElement from '../components/shared/AutorTableElement.vue'
 
   export default {
     name: 'AdminArchivoList',
     components: {
       AdminBaseLayout,
       AdminTable,
-      FacultadTableElement
+      AutorTableElement
     },
     data() {
       return {
@@ -25,9 +25,9 @@
           id: 1,
           nombre: 'Gerry'
         },
-        facultades: [{
+        autores: [{
           "id": 1,
-          "nombre": "telemática",
+          "nombre": "Borges",
           "createdAt": "2018-11-19T19:21:09.769+0000",
           "updatedAt": "2018-11-19T19:21:09.769+0000"
         }],

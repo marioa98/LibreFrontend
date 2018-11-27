@@ -3,37 +3,37 @@
     <p class="menu-label">General</p>
     <ul class="menu-list">
       <li>
-        <a href="/">Inicio</a>
+        <router-link to="/admin/home">Inicio</router-link>
       </li>
       <li>
-        <a href="/">Pefil</a>
+        <router-link to="/">Pefil</router-link>
       </li>
     </ul>
     <p class="menu-label">Archivos</p>
     <ul class="menu-list">
       <li>
-        <a href="/">Ver archivos</a>
+        <router-link to="/admin/archivos">Ver archivos</router-link>
       </li>
       <li>
-        <a href="/">Agregar archivos</a>
+        <router-link to="/admin/agregar/archivo">Agregar archivos</router-link>
       </li>
     </ul>
     <p class="menu-label">Administradores</p>
     <ul class="menu-list">
       <li>
-        <a href="/">Ver administradores</a>
+        <router-link to="/admin/administradores">Ver administradores</router-link>
       </li>
       <li>
-        <a href="/">Agregar administrador</a>
+        <router-link to="/admin/agregar/administrador">Agregar administrador</router-link>
       </li>
     </ul>
-    <p class="menu-label">Facultades</p>
+    <p class="menu-label">Autores</p>
     <ul class="menu-list">
       <li>
-        <a href="/">Ver facultades</a>
+        <router-link to="/admin/autores">Ver autores</router-link>
       </li>
       <li>
-        <a href="/">Agregar facultades</a>
+        <router-link to="/admin/agregar/autor">Agregar autor</router-link>
       </li>
     </ul>
   </div>

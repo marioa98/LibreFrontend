@@ -1,18 +1,22 @@
 <template>
   <div>
-    <admin-form-add />
+    <autor-form-add />
   </div>
 </template>
 <script>
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
-  import AdminFormAdd from '../components/shared/AdminFormAdd.vue'
+  import AutorFormAdd from '../components/shared/AutorFormAdd.vue'
 
   export default {
-    name: 'AdminAdministradorInfo',
+    name: 'AdminAutorAdd',
     components: {
       AdminBaseLayout,
-      AdminFormAdd
+      AutorFormAdd
+    },
+    data() {
+      return {
+      }
     }
   }
 

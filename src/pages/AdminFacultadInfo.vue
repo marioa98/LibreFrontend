@@ -1,7 +1,7 @@
 <template>
-  <admin-base-layout v-bind:admin="admin">
+  <div>
     <facultad-form-info v-bind:facultad="facultad" />
-  </admin-base-layout>
+  </div>
 </template>
 <script>
   //layout

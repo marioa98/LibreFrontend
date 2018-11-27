@@ -1,7 +1,7 @@
 <template>
   <div>
     <admin-table v-bind:headers="headers">
-      <admin-table-element v-for="a in administradores" v-bind:administrador="a" v-bind:key="a.id" />
+      <facultad-table-element v-for="facultad in facultades" v-bind:facultad="facultad" v-bind:key="facultad.id" />
     </admin-table>
   </div>
 </template>
@@ -10,14 +10,14 @@
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
   //shared
   import AdminTable from '../components/shared/Table.vue'
-  import AdminTableElement from '../components/shared/AdminTableElement.vue'
+  import FacultadTableElement from '../components/shared/FacultadTableElement.vue'
 
   export default {
-    name: 'AdminArchivoList',
+    name: 'AdminFacultadList',
     components: {
       AdminBaseLayout,
       AdminTable,
-      AdminTableElement
+      FacultadTableElement
     },
     data() {
       return {
@@ -25,12 +25,11 @@
           id: 1,
           nombre: 'Gerry'
         },
-        administradores: [{
+        facultades: [{
           "id": 1,
-          "nombre": "Gerardo",
-          "apellidos": "Chávez",
-          "correo": "gchavez8@ucol.mx",
-          "activo": true
+          "nombre": "telemática",
+          "createdAt": "2018-11-19T19:21:09.769+0000",
+          "updatedAt": "2018-11-19T19:21:09.769+0000"
         }],
         headers: [{
             id: 1,
@@ -41,16 +40,8 @@
             name: 'nombre'
           },
           {
-            id: 3,
-            name: 'apellidos'
-          },
-          {
-            id: 4,
-            name: 'estado'
-          },
-          {
-            id: 5,
-            name: 'Accion'
+            id: 2,
+            name: 'accion'
           }
         ]
       }
