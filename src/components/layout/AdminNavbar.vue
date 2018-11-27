@@ -10,7 +10,6 @@
           <router-link class="navbar-item" to="/admin/archivos">Archivos</router-link>
           <router-link class="navbar-item" to="/admin/administradores">Administradores</router-link>
           <router-link class="navbar-item" to="/admin/usuarios"> Usuarios</router-link>
-          <router-link class="navbar-item" to="/admin/facultades">Facultades</router-link>
           <router-link class="navbar-item" to="/admin/autores">Autores</router-link>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">Cuenta</a>

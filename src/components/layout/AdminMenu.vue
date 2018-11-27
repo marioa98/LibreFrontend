@@ -27,15 +27,6 @@
         <router-link to="/admin/agregar/administrador">Agregar administrador</router-link>
       </li>
     </ul>
-    <p class="menu-label">Facultades</p>
-    <ul class="menu-list">
-      <li>
-        <router-link to="/admin/facultades">Ver facultades</router-link>
-      </li>
-      <li>
-        <router-link to="/admin/agregar/facultad">Agregar facultades</router-link>
-      </li>
-    </ul>
     <p class="menu-label">Autores</p>
     <ul class="menu-list">
       <li>
