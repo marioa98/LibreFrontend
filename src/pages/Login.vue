@@ -47,10 +47,10 @@
           password: this.password
         }).then(res => {
           this.persona = res
+          if (this.persona.id) {
+            this.goToHomeUser(this.persona.id)
+          }
         })
-        if (this.persona.id) {
-          this.goToHomeUser(this.persona.id)
-        }
       },
       submitToAdmin: function () {
         administradorService.login({
@@ -58,10 +58,10 @@
           password: this.password
         }).then(res => {
           this.persona = res
+          if (this.persona.id) {
+            this.goToHomeAdmin(this.persona.id)
+          }
         })
-        if (this.persona.id) {
-          this.goToHomeAdmin(this.persona.id)
-        } else {}
       },
       goToHomeAdmin: function (id) {
         this.$router.push({
