@@ -30,14 +30,9 @@
 <script>
   // service
   import administradorService from '../../services/administrador'
-  // inputs
-  import InputText from '../inputs/InputText.vue'
   
   export default {
     name: 'AdminFormAdd',
-    components: {
-      InputText
-    },
     methods: {
       submit: function () {
         administradorService.agregar({

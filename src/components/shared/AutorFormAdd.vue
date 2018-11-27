@@ -1,7 +1,12 @@
 <template>
   <form>
-    <input-text v-bind:field="fields[0]" />
-    <button class="button">Cancelar</button>
+    <div class="field">
+      <label class="label" for="AutorName">Nombre</label>
+      <div class="control">
+        <input class="input" type="text" name="name" id="AutorName" placeholder="Ingresa el nombre del autor"
+          v-model="nombre">
+      </div>
+    </div>
     <button class="button">Agregar</button>
   </form>
 </template>
