@@ -15,7 +15,7 @@
         <router-link to="/admin/archivos">Ver archivos</router-link>
       </li>
       <li>
-        <router-link to="/">Agregar archivos</router-link>
+        <router-link to="/admin/agregar/archivo">Agregar archivos</router-link>
       </li>
     </ul>
     <p class="menu-label">Administradores</p>
@@ -24,7 +24,7 @@
         <router-link to="/admin/administradores">Ver administradores</router-link>
       </li>
       <li>
-        <router-link to="/">Agregar administrador</router-link>
+        <router-link to="/admin/agregar/administrador">Agregar administrador</router-link>
       </li>
     </ul>
     <p class="menu-label">Facultades</p>
@@ -33,7 +33,7 @@
         <router-link to="/admin/facultades">Ver facultades</router-link>
       </li>
       <li>
-        <router-link to="/">Agregar facultades</router-link>
+        <router-link to="/admin/agregar/facultad">Agregar facultades</router-link>
       </li>
     </ul>
     <p class="menu-label">Autores</p>
@@ -42,7 +42,7 @@
         <router-link to="/admin/autores">Ver autores</router-link>
       </li>
       <li>
-        <router-link to="/">Agregar autor</router-link>
+        <router-link to="/admin/agregar/autor">Agregar autor</router-link>
       </li>
     </ul>
   </div>

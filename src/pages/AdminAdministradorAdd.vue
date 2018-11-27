@@ -13,14 +13,6 @@
     components: {
       AdminBaseLayout,
       AdminFormAdd
-    },
-    data() {
-      return {
-        admin: {
-          id: 1,
-          nombre: 'Gerry'
-        }
-      }
     }
   }
 

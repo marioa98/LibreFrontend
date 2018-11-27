@@ -16,10 +16,10 @@ import LibreAutorList from './pages/AdminAutorList.vue'
 // import LibreArchivoInfo from './pages/AdminArchivoInfo.vue'
 // import LibreFacultadInfo from './pages/AdminFacultadInfo.vue'
 // import LibreUsuarioInfo from './pages/AdminUsuarioInfo.vue'
-// import LibreAdminAdd from './pages/AdminAdministradorAdd.vue'
-// import LibreFacultadAdd from './pages/AdminFacultadAdd.vue'
-// import LibreArchivoAdd from './pages/AdminArchivoAdd.vue'
-// import LibreAutorAdd from './pages/AdminFacultadAdd.vue'
+import LibreAdminAdd from './pages/AdminAdministradorAdd.vue'
+import LibreFacultadAdd from './pages/AdminFacultadAdd.vue'
+import LibreArchivoAdd from './pages/AdminArchivoAdd.vue'
+import LibreAutorAdd from './pages/AdminAutorAdd.vue'
 
 const routes = [{
     path: '/',
@@ -68,6 +68,26 @@ const routes = [{
         path: 'autores',
         component: LibreAutorList,
         name: 'autorList'
+      },
+      {
+        path: 'agregar/administrador',
+        component: LibreAdminAdd,
+        name: 'adminAdd'
+      },
+      {
+        path: 'agregar/facultad',
+        component: LibreFacultadAdd,
+        name: 'facultadAdd'
+      },
+      {
+        path: 'agregar/archivo',
+        component: LibreArchivoAdd,
+        name: 'archivoAdd'
+      },
+      {
+        path: 'agregar/autor',
+        component: LibreAutorAdd,
+        name: 'autorAdd'
       }
     ]
   }
