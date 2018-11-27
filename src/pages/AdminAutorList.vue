@@ -6,6 +6,8 @@
   </div>
 </template>
 <script>
+  //services
+  import autorService from '../services/autor'
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
   //shared
@@ -13,24 +15,20 @@
   import AutorTableElement from '../components/shared/AutorTableElement.vue'
 
   export default {
-    name: 'AdminArchivoList',
+    name: 'AdminAutorList',
     components: {
       AdminBaseLayout,
       AdminTable,
       AutorTableElement
     },
+    created() {
+      autorService.obtenerTodos().then(res => {
+        this.autores = res
+      })
+    },
     data() {
       return {
-        admin: {
-          id: 1,
-          nombre: 'Gerry'
-        },
-        autores: [{
-          "id": 1,
-          "nombre": "Borges",
-          "createdAt": "2018-11-19T19:21:09.769+0000",
-          "updatedAt": "2018-11-19T19:21:09.769+0000"
-        }],
+        autores: [],
         headers: [{
             id: 1,
             name: 'id'
@@ -40,7 +38,7 @@
             name: 'nombre'
           },
           {
-            id: 2,
+            id: 3,
             name: 'accion'
           }
         ]

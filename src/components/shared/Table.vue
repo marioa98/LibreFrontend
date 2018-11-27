@@ -18,7 +18,7 @@
     name: 'LibreTable',
     props: {
       headers: {
-        type: Object,
+        type: Array,
         required: true
       }
     }

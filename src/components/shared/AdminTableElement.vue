@@ -5,12 +5,8 @@
     <td>{{ administrador.apellidos }}</td>
     <td>{{ administrador.activo }}</td>
     <td>
-      <button>
-        ver
-      </button>
-      <button>
-        eliminar
-      </button>
+      <button>ver</button>
+      <button>eliminar</button>
     </td>
   </tr>
 </template>

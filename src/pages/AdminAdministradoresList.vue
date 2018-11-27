@@ -6,6 +6,8 @@
   </div>
 </template>
 <script>
+  //services
+  import administradorService from '../services/administrador'
   //layout
   import AdminBaseLayout from '../components/layout/AdminBaseLayout.vue'
   //shared
@@ -19,19 +21,14 @@
       AdminTable,
       AdminTableElement
     },
+    created() {
+      administradorService.obtenerTodos().then(res => {
+        this.administradores = res
+      })
+    },
     data() {
       return {
-        admin: {
-          id: 1,
-          nombre: 'Gerry'
-        },
-        administradores: [{
-          "id": 1,
-          "nombre": "Gerardo",
-          "apellidos": "Chávez",
-          "correo": "gchavez8@ucol.mx",
-          "activo": true
-        }],
+        administradores: [],
         headers: [{
             id: 1,
             name: 'id'
