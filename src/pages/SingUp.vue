@@ -73,11 +73,17 @@
         }).then(
           res => {
             this.usuario = res.data
+            this.goToHome(this.usuario.id)
           }
         )
       },
-      goToHome: function () {
-        
+      goToHome: function (id) {
+        this.$router.push({
+          name: 'usuarioHome',
+          params: {
+            id
+          }
+        })
       }
     },
     data() {
